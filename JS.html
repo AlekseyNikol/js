@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+</head>
+<body>
+    <script>
+
+        //let num = 10;
+/*
+        function info() {
+            let num = 20;
+
+        }
+
+        info();
+
+        console.log (num);
+      //
+        function summa(arr) {
+            let sum=0;
+            for (i = 0; i < arr.length; i++)
+                sum += arr[i];
+
+            return sum;
+
+            console.log (sum)
+        }
+
+        let array = [6, 8, 15];
+        let array2 = [11, 11, 16];
+        let array3 = [6, 8, 17];
+
+        let res = summa(array);
+        alert ('You have ' + res);
+      //  summa(array2);
+       // summa(array3);
+ */
+        let ega = prompt ('сколько лет?');
+
+        function H(ega) {
+            if (ega >= 18) {
+                return true;
+            } else if (ega < 18 && ega > 15) {
+                return confirm ('родители разрешили?');
+            }
+
+        }
+
+if (H(ega)) {
+  alert( 'Доступ получен' );
+} else {
+  alert( 'Доступ закрыт' );
+}
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>практика 2</title>
+    <style>
+        .conteiner {
+            width: 800px;
+            height: auto;
+            margin:  0 auto;
+            display: flex;
+            justify-content: space-between;
+
+        }
+        .conteiner > div {
+            width: 200px;
+            height: 500px;
+            border: 1px solid #000;
+
+        }
+        .block1 img, .block2 img, .block3 img {
+            height: 430px;
+            width: auto;
+      }
+        img, button {
+            margin: 5px 20%;
+        }
+       /* button:hover {
+            background: #b0aeae;
+        } *
+
+    </style>
+</head>
+<body>
+<div class="conteiner">
+    <div class="block1"><img src="img/0_0_prod_desktop%20(1).jpg" alt=""><button onclick="onClickButton(this)">Выбрать эту бутылку</button></div>
+    <div class="block2"><img src="img/0_0_prod_desktop%20(2).jpg" alt=""><button onclick="onClickButton(this)">Выбрать эту бутылку</button></div>
+    <div class="block3"><img src="img/0_0_prod_desktop.jpg" alt=""><button onclick="onClickButton(this)">Выбрать эту бутылку</button></div>
+</div>
+<!--
+  <button onclick="alert('вы нажали на меня')">Нажми на меня</button>
+  -->
+    <script>
+        let counter = 0;
+
+function onClickButton(but) {
+    counter++;
+    but.style.background = "#b0aeae";
+    return confirm ('Вам есть 18 лет?');
+    console.log (counter);
+}
+
+    if (onClickButton(but)) {
+        alert ('выбор подтвержден!');
+    } else {
+        alert ('алкоголь запрещен лицам вашего возраста!');
+    }
+
+
+    </script>
+</body>
+</html>
