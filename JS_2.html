@@ -50,9 +50,8 @@ function onClickButton(but) {
     counter++;
     console.log (counter);
     but.style.background = "#b0aeae";
-    confirm ('Вам есть 18 лет?');
 
-    if (true) {
+    if (confirm ('Вам есть 18 лет?')) {
         alert ('выбор подтвержден!');
     } else {
         alert ('алкоголь запрещен лицам вашего возраста!');
