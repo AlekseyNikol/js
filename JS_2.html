@@ -37,25 +37,27 @@
     <div class="block2"><img src="img/0_0_prod_desktop%20(2).jpg" alt=""><button onclick="onClickButton(this)">Выбрать эту бутылку</button></div>
     <div class="block3"><img src="img/0_0_prod_desktop.jpg" alt=""><button onclick="onClickButton(this)">Выбрать эту бутылку</button></div>
 </div>
-<!--
-  <button onclick="alert('вы нажали на меня')">Нажми на меня</button>
-  -->
+     <!--   if (onClickButton(but) = true) {
+        alert ('выбор подтвержден!');
+    } else {
+        alert ('алкоголь запрещен лицам вашего возраста!');
+    } -->
     <script>
+
         let counter = 0;
 
 function onClickButton(but) {
     counter++;
-    but.style.background = "#b0aeae";
-    return confirm ('Вам есть 18 лет?');
     console.log (counter);
-}
+    but.style.background = "#b0aeae";
+    confirm ('Вам есть 18 лет?');
 
-    if (onClickButton(but)) {
+    if (true) {
         alert ('выбор подтвержден!');
     } else {
         alert ('алкоголь запрещен лицам вашего возраста!');
     }
-
+}
 
     </script>
 </body>
