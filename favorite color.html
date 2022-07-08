@@ -71,8 +71,10 @@ function User() {
         //setTimeout(() => { user123.userName() }, 3000); - задержка есть, но не срабатывает document.write.
 
         //setTimeout(user123.userName(), 3000); - задержка не срабатывает.
-
-        document.write(user123);
+        function UserTwo() {
+            document.write(user123);
+        }
+    setTimeout(UserTwo, 1000);
 </script>
 </body>
 </html>
