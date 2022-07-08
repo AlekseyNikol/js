@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+</head>
+<body>
+<script>
+function User() {
+
+        this.result = "";
+
+        this.userName = function() {
+            this.name = prompt('Как ваше имя?');
+
+            if (this.name !== null && this.name !== "") {
+                this.questionUser();
+        }     else {
+                this.result = "Нужно указать имя."
+        }
+    },
+
+        this.questionUser = function() {
+            this.question = prompt(`${this.name} какой цвет ваш любимый ?`);
+
+            if (this.question !== null && this.question !== "") {
+                this.colorUser();
+        }     else {
+                this.questionUser()
+        }
+    },
+
+        this.colorUser = function() {
+            if (this.question == "красный") {
+                this.color = `${this.name}, вы активный, самовлебленный и амбициозный.`;
+        } else if (this.question == "зеленый") {
+                this.color = `${this.name}, вы обладаете завидным терпением и высоким уровнем интеллекта.`;
+        } else if (this.question == "голубой") {
+            this.color = `${this.name}, вам присущие такие черты личностям— верность, чувственность, впечатлительность, романтичность.`;
+        } else if (this.question == "синий") {
+            this.color = `${this.name}, вы обладаете хорошо развитым логическим мышлением, пунктуальностью, рациональным подходом к делу.`;
+        } else if (this.question == "желтый") {
+            this.color = `${this.name}, вам характерны черты— креативность, отличная интуиция, желание развиваться и узнавать что - то новое.`;
+        } else if (this.question == "оранжевый") {
+            this.color = `${this.name}, вы излучаете позитив и дарите всем окружающим хорошее настроение.`
+        } else if (this.question == "серый") {
+            this.color = `${this.name}, вы интеллигентны и коммуникабельны.`
+        } else if (this.question == "коричневый") {
+            this.color = `${this.name}, ваши главные качества— строгость, сдержанность, настойчивость.`
+        } else if (this.question == "белый") {
+            this.color = `${this.name}, вы отличаетесь уверенностью в себе, стремлением к самореализации, повышенной аккуратностью и проницательностью.`
+        } else if (this.question == "черный") {
+            this.color = `${this.name}, вы деятельный и целеустремленный.`
+        } else {
+            alert('попробуйте назвать другой цвет');
+            this.questionUser();
+        }
+
+        this.result = this.color;
+        }
+
+        this.toString = function() {
+            return this.result;
+        }
+    }
+
+        let user123 = new User();
+
+        user123.userName();
+
+        //setTimeout(() => { user123.userName() }, 3000); - задержка есть, но не срабатывает document.write.
+
+        //setTimeout(user123.userName(), 3000); - задержка не срабатывает.
+
+        document.write(user123);
+</script>
+</body>
+</html>
